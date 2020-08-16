@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>MyBlogTest</title>
+  <title>可可奶糖屋</title>
   
-  
+  <subtitle>兴趣使然的无名小站</subtitle>
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
@@ -10,7 +10,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>ZYL</name>
+    <name>daisukiKaffuChino</name>
     
   </author>
   
