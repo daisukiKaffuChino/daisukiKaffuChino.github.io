@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1597560043923">
+  <link rel="stylesheet" href="/css/style.css?v=1597560611003">
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="MyBlogTest" type="application/atom+xml">
 </head>
 
@@ -177,7 +177,66 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <div class="nexmoe-post">
+        <style>
+  article > *:first-child {
+    margin-top: 0!important;
+  }
+  article ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -5px;
+  }
+  article ul li {
+    transition: all .03s;
+    width: calc(12.5% - 10px);
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-size: 0;
+    overflow: hidden;
+  }
+  article ul li > a::after {
+    font-size: 13px;
+    color: #606266;
+    -webkit-transition: none;
+    transition: none;
+    content: attr(title);
+    display: block;
+    position: relative;
+    width: 100%;
+    border: none;
+    padding: 3px 10px 5px 10px;
+    margin-top: -2px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  article ul li img {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    display: block;
+  }
+  article ul li img.lazyload {
+    padding-bottom: 100%;
+    opacity: 0;
+  }
+  article ul li img.lazyloaded {
+    padding-bottom: 0;
+    opacity: 1;
+  }
+  @media screen and (max-width: 768px) {
+    article ul li {
+      width: calc(33.3333333333% - 10px);
+    }
+}
+</style>
+
+<div class="nexmoe-post">
   <article class="nexmoe-py">
     <p>404~</p>
 
@@ -199,7 +258,6 @@
 </script>
 </section>
 </div>
-
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
@@ -209,7 +267,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1597560043924"></script>
+<script src="/js/app.js?v=1597560611004"></script>
   
 
 
