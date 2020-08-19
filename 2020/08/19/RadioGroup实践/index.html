@@ -15,22 +15,22 @@
     <meta name="baidu-site-verification" content="NzEJ2nWjSG" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <meta name="description" content="前言这是我的第一篇博文，也是第一篇 AndroLua+ 教程。我在2018年末偶然接触到了 Fusion App ，从懵懂的小白一路前行到现在，靠的正是热爱和乐于思索总结的习惯。也许我的文章可以帮助更多人学习 AndroLua+ 时少走弯路，保持学习的兴趣 。 RadioGroup 确切的说是一个容器，可以允许你向其中添加单选按钮 RadioButton 。">
+  <meta name="description" content="前言这是我的第一篇博文，也是第一篇 AndroLua+ 教程。我在2018年末偶然接触到了 Fusion App ，从懵懂的小白一路前行到现在，靠的正是热爱和乐于思索总结的习惯。也许我的文章可以帮助更多人学习 AndroLua+ 时少走弯路，保持学习的兴趣 。 RadioGroup 确切地说是一个容器，可以允许你向其中添加单选按钮 RadioButton 。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AndroLua+实践（1） 单选组件RadioGroup">
 <meta property="og:url" content="https://cocotoffee.top/2020/08/19/RadioGroup%E5%AE%9E%E8%B7%B5/index.html">
 <meta property="og:site_name" content="可可奶糖屋">
-<meta property="og:description" content="前言这是我的第一篇博文，也是第一篇 AndroLua+ 教程。我在2018年末偶然接触到了 Fusion App ，从懵懂的小白一路前行到现在，靠的正是热爱和乐于思索总结的习惯。也许我的文章可以帮助更多人学习 AndroLua+ 时少走弯路，保持学习的兴趣 。 RadioGroup 确切的说是一个容器，可以允许你向其中添加单选按钮 RadioButton 。">
+<meta property="og:description" content="前言这是我的第一篇博文，也是第一篇 AndroLua+ 教程。我在2018年末偶然接触到了 Fusion App ，从懵懂的小白一路前行到现在，靠的正是热爱和乐于思索总结的习惯。也许我的文章可以帮助更多人学习 AndroLua+ 时少走弯路，保持学习的兴趣 。 RadioGroup 确切地说是一个容器，可以允许你向其中添加单选按钮 RadioButton 。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-19T09:02:00.000Z">
-<meta property="article:modified_time" content="2020-08-19T09:39:37.366Z">
+<meta property="article:modified_time" content="2020-08-19T12:39:32.062Z">
 <meta property="article:author" content="daisukiKaffuChino">
 <meta property="article:tag" content="AndroLua+">
 <meta property="article:tag" content="Lua">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1597833960086">
+  <link rel="stylesheet" href="/css/style.css?v=1597840789832">
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="可可奶糖屋" type="application/atom+xml">
 </head>
 
@@ -201,7 +201,7 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月19日</a>
-    <a><i class="nexmoefont icon-areachart"></i>118 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>358 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -211,10 +211,42 @@
 
   <article>
     <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是我的第一篇博文，也是第一篇 AndroLua+ 教程。我在2018年末偶然接触到了 Fusion App ，从懵懂的小白一路前行到现在，靠的正是热爱和乐于思索总结的习惯。也许我的文章可以帮助更多人学习 AndroLua+ 时少走弯路，保持学习的兴趣 。</p>
-<p>RadioGroup 确切的说是一个容器，可以允许你向其中添加单选按钮 RadioButton 。</p>
+<p>RadioGroup 确切地说是一个容器，可以允许你向其中添加单选按钮 RadioButton 。</p>
 <a id="more"></a>
 
-<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><ol>
+<li>Android 5.1以上设备</li>
+<li>AndroLua+ 软件，我用的是5.0.1版本。</li>
+</ol>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="单选按钮"><a href="#单选按钮" class="headerlink" title="单选按钮"></a>单选按钮</h3><p>单选按钮是使用频率「不是很高」的组件，但它在提升软件交互方面依旧非常重要。目前 AndroLua+ 可用的 RadioGroup 教程非常少 <del>反正我是没找到</del> 。</p>
+<p>新建工程，打开 layout.aly ,添加一个 RadioGroup 布局，id 为 my_group 。其中放置两个按钮 <strong>（RadioButton必须放在RadioGroup中，该布局起到约束的作用，决定哪几个按钮是同一组。同一组中的按钮最多只能选择一个。）</strong> RadioGroup可以使用 LinearLayout 的属性；RadioButton 也可以使用 TextView 的属性。</p>
+<pre><code class="lua">&amp;#123;
+  LinearLayout,
+  orientation=&quot;vertical&quot;,
+  layout_width=&quot;fill&quot;,
+  layout_height=&quot;fill&quot;,
+  &amp;#123;
+    RadioGroup,
+    orientation=&quot;vertical&quot;,
+    layout_width=&quot;-1&quot;,
+    layout_height=&quot;-2&quot;,
+    id=&quot;my_group&quot;,
+    &amp;#123;
+      RadioButton,
+      layout_width=&quot;-1&quot;,
+      layout_height=&quot;-2&quot;,
+      text=&quot;选项一&quot;,
+    &amp;#125;,
+    &amp;#123;
+      RadioButton,
+      layout_width=&quot;-1&quot;,
+      layout_height=&quot;-2&quot;,
+      text=&quot;选项二&quot;,
+    &amp;#125;,
+  &amp;#125;,
+&amp;#125;
+</code></pre>
+
   </article>
 
   
@@ -267,7 +299,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1597833960089"></script>
+<script src="/js/app.js?v=1597840789832"></script>
   
 
 
