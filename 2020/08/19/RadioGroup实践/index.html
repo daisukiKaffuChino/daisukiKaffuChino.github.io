@@ -22,15 +22,18 @@
 <meta property="og:site_name" content="可可奶糖屋">
 <meta property="og:description" content="前言这是我的第一篇博文，也是第一篇 AndroLua+ 教程。我在2018年末偶然接触到了 Fusion App ，从懵懂的小白一路前行到现在，靠的正是热爱和乐于思索总结的习惯。也许我的文章可以帮助更多人学习 AndroLua+ 时少走弯路，保持学习的兴趣 。 RadioGroup 确切地说是一个容器，可以允许你向其中添加单选按钮 RadioButton 。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/daisukiKaffuChino/MyPic@latest/IMG_20200820_131205.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/daisukiKaffuChino/MyPic@latest/IMG_20200820_140851.jpg">
 <meta property="article:published_time" content="2020-08-19T09:02:00.000Z">
-<meta property="article:modified_time" content="2020-08-19T15:21:05.099Z">
+<meta property="article:modified_time" content="2020-08-20T06:23:49.462Z">
 <meta property="article:author" content="daisukiKaffuChino">
 <meta property="article:tag" content="AndroLua+">
 <meta property="article:tag" content="Lua">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/daisukiKaffuChino/MyPic@latest/IMG_20200820_131205.jpg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css?v=233" crossorigin>
   
-  <link rel="stylesheet" href="/css/style.css?v=1597850507702">
+  <link rel="stylesheet" href="/css/style.css?v=1597904671572">
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="可可奶糖屋" type="application/atom+xml">
 </head>
 
@@ -55,16 +58,16 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>3</div>
+        <div><span>文章</span>2</div>
         <div><span>标签</span>3</div>
         <div><span>分类</span>2</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
         
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="首页文章">
             <i class="mdui-list-item-icon nexmoefont icon-home"></i>
             <div class="mdui-list-item-content">
-                回到首页
+                首页文章
             </div>
         </a>
         
@@ -167,7 +170,7 @@
   <div class="nexmoe-widget-wrap">
     <h3 class="nexmoe-widget-title">文章归档</h3>
     <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -201,11 +204,19 @@
   
   <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月19日</a>
-    <a><i class="nexmoefont icon-areachart"></i>355 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>837 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
 </div>
 
   <div class="nexmoe-post-right">
+    
+      <div class="nexmoe-fixed">
+        <div class="nexmoe-valign">
+            <div class="nexmoe-toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">环境配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-number">2.</span> <span class="toc-text">开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE"><span class="toc-number">2.1.</span> <span class="toc-text">单选按钮</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91"><span class="toc-number">3.</span> <span class="toc-text">逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86"><span class="toc-number">3.1.</span> <span class="toc-text">基础原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%80%83%EF%BC%9A%E5%A6%82%E6%9E%9C%E4%B8%80%E4%B8%AA-RadioGroup-%E5%86%85%E5%8C%85%E5%90%AB%E4%B8%89%E4%B8%AA-RadioButton-%EF%BC%8C%E9%80%89%E6%8B%A9%E5%88%A4%E6%96%AD%E8%AF%A5%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%EF%BC%9F"><span class="toc-number">3.1.1.</span> <span class="toc-text">思考：如果一个 RadioGroup 内包含三个 RadioButton ，选择判断该如何修改？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98"><span class="toc-number">4.</span> <span class="toc-text">实战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><span class="toc-number">4.1.</span> <span class="toc-text">项目背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E6%89%8B%EF%BC%81"><span class="toc-number">4.2.</span> <span class="toc-text">上手！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E5%85%B6%E4%BB%96%E6%8E%A7%E4%BB%B6%E8%81%94%E5%8A%A8"><span class="toc-number">4.3.</span> <span class="toc-text">与其他控件联动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%80%83%EF%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9%E5%90%8C%E4%B8%80-Activity-%E6%8B%A5%E6%9C%89%E4%B8%A4%E7%BB%84%E5%8F%AF%E5%88%86%E5%88%AB%E9%80%89%E6%8B%A9%E7%9A%84%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE%EF%BC%9F"><span class="toc-number">4.3.1.</span> <span class="toc-text">思考：如何让同一 Activity 拥有两组可分别选择的单选按钮？</span></a></li></ol></li></ol></li></ol>
+            </div>
+        </div>
+      </div>
     
   </div>
 
@@ -245,6 +256,47 @@
     },
   },
 }</code></pre>
+
+<p><img data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/daisukiKaffuChino/MyPic@latest/IMG_20200820_131205.jpg" alt="图片" class="lazyload"></p>
+<p>自带 Widget 库中就有该组件了，不需要额外导入。</p>
+<h2 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h2><h3 id="基础原理"><a href="#基础原理" class="headerlink" title="基础原理"></a>基础原理</h3><p>接下来我们看看具体的逻辑怎么写。和其它控件一样，判断按钮是否选中也需要创建一个监听器。先为 RadioGroup 设置一个 OnCheckedChangeListener 。</p>
+<pre><code>checkgroup.OnCheckedChangeListener&#x3D;{
+  onCheckedChanged&#x3D;function(k,v)
+    if checkgroup.getChildAt(0).isChecked() then
+   --第一个按钮选中
+    else
+     --第二个按钮选中
+      end
+    end
+  end}</code></pre>
+
+<p>在绝大部分编程语言的序号排列中，都 <strong>约定俗成地从0开始计数</strong> 。所以 id.getChildAt(0) 返回一个实例，代表其中第一个按钮。以此类推，第二个就是 id.getChildAt(1) 了。</p>
+<p>这时，你可能注意到了一个 API ，即 id.isChecked() 。它会返回一个布尔值，用于判断该实例是否被选中。</p>
+<h4 id="思考：如果一个-RadioGroup-内包含三个-RadioButton-，选择判断该如何修改？"><a href="#思考：如果一个-RadioGroup-内包含三个-RadioButton-，选择判断该如何修改？" class="headerlink" title="思考：如果一个 RadioGroup 内包含三个 RadioButton ，选择判断该如何修改？"></a>思考：如果一个 RadioGroup 内包含三个 RadioButton ，选择判断该如何修改？</h4><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h3 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h3><p>假设我们编写一个聊天软件，其中重要的一项内容就是设置用户在线状态。默认在线状态为在线，除此之外提供隐身、忙碌两个选项。</p>
+<h3 id="上手！"><a href="#上手！" class="headerlink" title="上手！"></a>上手！</h3><p>编写界面如下，设置 RadioGroup 的 id 为 my_group 。</p>
+<p>不指定默认状态可不行。该操作不需要用户参与，应该由程序自动完成，那么可以使用如下方法选中第一项：</p>
+<pre><code>my_group.getChildAt(0).Checked &#x3D; true</code></pre>
+
+<p><img data-sizes="auto" data-src="https://cdn.jsdelivr.net/gh/daisukiKaffuChino/MyPic@latest/IMG_20200820_140851.jpg" alt="图片" class="lazyload"></p>
+<p>运行程序，发现默认已经选择了 “在线”。</p>
+<h3 id="与其他控件联动"><a href="#与其他控件联动" class="headerlink" title="与其他控件联动"></a>与其他控件联动</h3><p>添加一个 TextView ，让它能显示我选择的是哪一项。在布局表中设置其 id 为 my_text 。</p>
+<p>编写代码如下：</p>
+<pre><code>my_group.OnCheckedChangeListener&#x3D;{
+  onCheckedChanged&#x3D;function(k,v)
+    if my_group.getChildAt(0).isChecked() then
+    my_text.setText(&quot;在线&quot;)
+     elseif my_group.getChildAt(1).isChecked() then
+     my_text.setText(&quot;隐身&quot;)
+     elseif my_group.getChildAt(2).isChecked() then
+     my_text.setText(&quot;忙碌&quot;)
+      end
+    end
+  end}</code></pre>
+
+<h4 id="思考：如何让同一-Activity-拥有两组可分别选择的单选按钮？"><a href="#思考：如何让同一-Activity-拥有两组可分别选择的单选按钮？" class="headerlink" title="思考：如何让同一 Activity 拥有两组可分别选择的单选按钮？"></a>思考：如何让同一 Activity 拥有两组可分别选择的单选按钮？</h4><hr>
+<p>全文结束，感谢阅读 (≧∀≦)ゞ</p>
+<hr>
+
   </article>
 
   
@@ -297,7 +349,7 @@
     <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
 
 
-<script src="/js/app.js?v=1597850507703"></script>
+<script src="/js/app.js?v=1597904671573"></script>
   
 
 
